@@ -1,13 +1,15 @@
-# MixTailor
+# MixTailor: Mixed Gradient Aggregation for Robust Learning Against Tailored Attacks
 
-Features below are included in this framework:
+Code for [MixTailor: Mixed Gradient Aggregation for Robust Learning Against Tailored Attacks](https://arxiv.org/pdf/2207.07941.pdf) to appear in TMLR.
 
-* Heterogenous Data Set
-* Gradient Sampling
-* Robust Aggregation Mechanisms
 
-## Generating Experiments
+# Citation
 
-```
-python3 -m dbqf.wg.grid_run --grid mnist --run_name mnist --cluster slurm --cluster_args 2,5,p100,t4 --prefix mnh
+```bibtex
+@article{ramezani2022mixtailor,
+  title={MixTailor: Mixed Gradient Aggregation for Robust Learning Against Tailored Attacks},
+  author={Ramezani-Kebrya, Ali and Tabrizian, Iman and Faghri, Fartash and Popovski, Petar},
+  journal={arXiv preprint arXiv:2207.07941},
+  year={2022}
+}
 ```

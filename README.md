@@ -30,14 +30,14 @@ gradients to the aggregator. The aggregator produces the final aggregated gradie
 ### Attacker
 
 All the attacks are implemented in [dbqf/attacks.py](https://github.com/Tabrizian/mix-tailor/blob/master/dbqf/attacks/attacks.py).
-To implement your own custom attacks you only need to extend the `Attack` class and implement the `grad` function. The `grad` function
+To implement your own custom attacks you need to extend the `Attack` class and implement the `grad` function. The `grad` function
 receives a list of honest gradients and has to return the attack gradient.
 
 ### Aggregator
 
-The aggregator receives a pool of graidents where some of them come from honest workers and other ones come from byzantine workers.
+The aggregator receives a pool of graidents where some of them come from honest workers and others come from byzantine workers.
 The main job of the aggregator is to find out which aggregators are honest and which ones are not and produce the final gradient based on that.
-The gradient produced by the aggregator will be applied to the model. All the aggregators are implemented in [dbqf/aggregators.py](https://github.com/Tabrizian/mix-tailor/blob/master/dbqf/aggregators/aggregators.py). In order to implemented your own aggregator, you need to 
+The gradient produced by the aggregator will be applied to the model. All the aggregators are implemented in [dbqf/aggregators.py](https://github.com/Tabrizian/mix-tailor/blob/master/dbqf/aggregators/aggregators.py). In order to implement your own aggregator, you need to 
 extend the `Aggregator` class and implement the `agg_g` function. This function receives a list of gradients (some honest, some byzantine) and 
 must return a tensor with the same size that contains the aggregated final gradient.
 
